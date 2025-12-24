@@ -48,6 +48,76 @@ img{max-width:100%;display:block;object-fit:cover}
 .brand-logo{width:44px; height:44px; border-radius:50%; object-fit:cover; border:2px solid rgba(255,255,255,.2)}
 .brand-title{font-weight:700}
 .brand-sub{font-size:.8rem; color:var(--muted)}
+/* HEADER */
+.header-bar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:12px 16px;
+}
+.menu-btn{
+  font-size:24px;
+  background:none;
+  border:none;
+}
+
+/* OVERLAY */
+#overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.4);
+  display:none;
+  z-index:998;
+}
+
+/* SIDEBAR */
+.sidebar{
+  position:fixed;
+  top:0;
+  left:-280px;
+  width:260px;
+  height:100%;
+  background:#fff;
+  z-index:999;
+  padding:20px;
+  transition:.3s ease;
+  overflow-y:auto;
+}
+.sidebar.open{ left:0; }
+
+.close-btn{
+  background:none;
+  border:1px solid #ccc;
+  padding:6px 10px;
+  float:right;
+}
+
+.menu{
+  list-style:none;
+  padding:40px 0 0;
+}
+.menu li{
+  margin-bottom:16px;
+}
+.menu a, .menu span{
+  text-decoration:none;
+  font-size:18px;
+  color:#111;
+  cursor:pointer;
+}
+.menu a.active{ color:#e91e63; }
+
+/* SUB MENU */
+.has-sub ul{
+  display:none;
+  padding-left:15px;
+  margin-top:8px;
+}
+.has-sub.open ul{ display:block; }
+.has-sub span::after{
+  content:"⌄";
+  float:right;
+}
 
 .nav{display:flex; gap:18px; align-items:center}
 .nav-link{color:var(--muted); text-decoration:none; padding:8px 10px; border-radius:12px; transition:.2s background,.2s color}
