@@ -108,3 +108,28 @@ document.querySelectorAll('.slider').forEach(s => {
     s.scrollLeft = touchScrollLeft - walk;
   }, {passive:true});
 });
+
+const sidebar = document.getElementById("sidebar");
+const menuBtn = document.getElementById("menuBtn");
+const closeBtn = document.getElementById("closeBtn");
+const overlay = document.getElementById("overlay");
+
+menuBtn.onclick = () => {
+  sidebar.classList.add("open");
+  overlay.style.display = "block";
+};
+
+closeBtn.onclick = closeSidebar;
+overlay.onclick = closeSidebar;
+
+function closeSidebar(){
+  sidebar.classList.remove("open");
+  overlay.style.display = "none";
+}
+
+/* SUB MENU TOGGLE */
+document.querySelectorAll(".has-sub > span").forEach(item=>{
+  item.onclick = () => {
+    item.parentElement.classList.toggle("open");
+  };
+});
