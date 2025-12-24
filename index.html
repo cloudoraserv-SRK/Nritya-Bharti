@@ -16,29 +16,50 @@
   <div class="float-deco deco-2"></div>
   <div class="float-deco deco-3"></div>
 
-  <!-- Header / Navbar -->
-  <header class="header" id="top">
-    <div class="container nav-container">
-      <a href="#top" class="brand">
-        <img src="NBSKKKLOGO.png" alt="logo" class="brand-logo" />
-        <div class="brand-text">
-          <span class="brand-title">Nritya Bharti Sangeet Kala Kendra</span>
-          <span class="brand-sub">(International Kathak Dance Principal)</span>
-        </div>
-      </a>
-      <nav class="nav" id="nav">
-        <a href="#home" class="nav-link">Home</a>
-        <a href="#about" class="nav-link">About</a>
-        <a href="#classes" class="nav-link">Classes</a>
-        <a href="#events" class="nav-link">Events</a>
-        <a href="#offer" class="nav-link highlight">Navratri Offer</a>
-        <a href="#contact" class="nav-link">Contact</a>
-      </nav>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </header>
+ <!-- HEADER -->
+<header class="header">
+  <div class="container header-bar">
+    <img src="NBSKKKLOGO.png" class="logo" alt="logo">
+    <button id="menuBtn" class="menu-btn">☰</button>
+  </div>
+</header>
+
+<!-- SIDEBAR -->
+<aside id="sidebar" class="sidebar">
+  <button id="closeBtn" class="close-btn">✕</button>
+
+  <ul class="menu">
+    <li><a href="#home" class="active">Home</a></li>
+
+    <li class="has-sub">
+      <span>Explore Us</span>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+      </ul>
+    </li>
+
+    <li class="has-sub">
+      <span>Diploma Exam</span>
+      <ul>
+        <li><a href="#">Apply</a></li>
+        <li><a href="#">Result</a></li>
+      </ul>
+    </li>
+
+    <li class="has-sub">
+      <span>Join With Us</span>
+      <ul>
+        <li><a href="#classes">Classes</a></li>
+        <li><a href="#events">Events</a></li>
+      </ul>
+    </li>
+
+    <li><a href="#contact">Need Help</a></li>
+  </ul>
+</aside>
+
+<div id="overlay"></div>
 
   <!-- Hero -->
   <section class="hero section" id="home">
