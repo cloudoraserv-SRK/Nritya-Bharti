@@ -218,9 +218,31 @@ img{max-width:100%;display:block;object-fit:cover}
 .hero{padding-top:40px}
 .hero-grid{display:grid; grid-template-columns:1.1fr .9fr; gap:40px; align-items:center}
 .hero-card{position:relative; border-radius:28px; overflow:visible; border:1px solid rgba(255,255,255,.08); background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); box-shadow:var(--shadow)}
-.hero-img{aspect-ratio: 4/5; width:100%;}
-.shine{position:absolute; inset:0; background:linear-gradient(120deg, transparent, rgba(255,255,255,.15), transparent); transform:translateX(-100%); animation:shine 4s ease-in-out infinite}
-@keyframes shine{ 50%{ transform:translateX(100%)} 100%{ transform:translateX(100%)} }
+.hero-img{
+  width: 100%;
+  max-width: 260px;   /* logo size control */
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+}
+
+/* Subtle premium glow instead of sweep shine */
+.shine{
+  position: absolute;
+  inset: -20%;
+  background: radial-gradient(
+    circle at center,
+    rgba(255,255,255,0.12),
+    transparent 60%
+  );
+  opacity: 0.8;
+  animation: glow 5s ease-in-out infinite;
+}
+
+@keyframes glow{
+  0%,100%{ opacity: 0.6; }
+  50%{ opacity: 1; }
+}
 .hero-badges{display:flex; flex-wrap:wrap; gap:10px; margin-top:16px}
 .ribbon {
   position: absolute; /* instead of absolute */
