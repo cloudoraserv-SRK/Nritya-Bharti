@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nritya Bharti Sangeet Kala kendra</title>
+  <meta name="description" content="Specialists in Online Dance Classes, Events, Fashion Shows & Competitions. Navratri Special: 10 Days Dandiya Class @ ₹249." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- Floating decorative shapes -->
+  <div class="float-deco deco-1"></div>
+  <div class="float-deco deco-2"></div>
+  <div class="float-deco deco-3"></div>
+
+ <!-- HEADER -->
+<header class="header">
+  <div class="container header-bar">
+    <img src="..//assets/images/NBSKKKLOGO.png" class="logo" alt="logo">
+    <button id="menuBtn" class="menu-btn">☰</button>
+  </div>
+</header>
+
+<!-- SIDEBAR -->
+<!-- SIDEBAR -->
+<aside id="sidebar" class="sidebar">
+  <button id="closeBtn" class="close-btn">✕</button>
+
+  <ul class="menu">
+    <li><a href="../index.html">Home</a></li>
+
+    <li class="has-sub">
+      <span>Explore Us</span>
+      <ul>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../gallery.html">Gallery</a></li>
+      </ul>
+    </li>
+
+    <li class="has-sub">
+      <span>Diploma Exam</span>
+      <ul>
+        <li><a href="../diploma/apply.html">Apply</a></li>
+        <li><a href="../diploma/result.html">Result</a></li>
+      </ul>
+    </li>
+
+    <li class="has-sub">
+      <span>Join With Us</span>
+      <ul>
+        <li><a href="../join/franchise.html">Franchise</a></li>
+        <li><a href="../join/events.html">Events</a></li>
+        <li><a href="../join/classes.html">Classes</a></li>
+      </ul>
+    </li>
+
+    <li><a href="#contact">Need Help</a></li>
+  </ul>
+</aside>
+
+<div id="overlay"></div>
+
+<!-- Main -->
+<main class="content">
+
+  <section class="events-section">
+
+    <!-- Header -->
+    <div class="events-header">
+      <h1>Events & Workshops</h1>
+      <p>
+        Explore our upcoming cultural programs, workshops, and highlights from
+        past events.
+      </p>
+    </div>
+
+    <!-- Upcoming Events -->
+    <section class="events-block">
+      <h2>Upcoming Events</h2>
+
+      <div class="events-grid">
+
+        <div class="event-card upcoming">
+          <div class="event-image">
+            <img src="../assets/images/NB.png" alt="Kathak Workshop">
+          </div>
+          <div class="event-content">
+            <h3>Kathak Intensive Workshop</h3>
+            <p class="event-meta">
+              <span>📅 Coming Soon</span>
+              <span>📍 New Delhi</span>
+            </p>
+            <p class="event-desc">
+              A focused Kathak workshop covering technique, rhythm, and expression.
+            </p>
+            <button class="event-btn" data-event="kathakWorkshop">
+              View Details
+            </button>
+          </div>
+        </div>
+
+        <div class="event-card upcoming">
+          <div class="event-image">
+            <img src="../assets/images/NB.png" alt="Bharatanatyam Program">
+          </div>
+          <div class="event-content">
+            <h3>Bharatanatyam Training Program</h3>
+            <p class="event-meta">
+              <span>📅 Coming Soon</span>
+              <span>📍 Jamnagar</span>
+            </p>
+            <p class="event-desc">
+              Structured training program for beginners and intermediate students.
+            </p>
+            <button class="event-btn" data-event="bharatanatyamProgram">
+              View Details
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Past Events -->
+    <section class="events-block">
+      <h2>Past Events</h2>
+
+      <div class="events-grid">
+
+        <div class="event-card past">
+          <div class="event-image">
+            <img src="../assets/images/NB.png" alt="Odissi Festival">
+          </div>
+          <div class="event-content">
+            <h3>Odissi Dance Festival</h3>
+            <p class="event-meta">
+              <span>📅 January 2024</span>
+              <span>📍 Jaipur</span>
+            </p>
+            <p class="event-desc">
+              A classical Odissi presentation showcasing tradition and creativity.
+            </p>
+            <button class="event-gallery-btn" data-event="odissiFestival">
+              View Gallery
+            </button>
+          </div>
+        </div>
+
+        <div class="event-card past">
+          <div class="event-image">
+            <img src="../assets/images/NB.png" alt="Folk Workshop">
+          </div>
+          <div class="event-content">
+            <h3>Folk Dance Workshop</h3>
+            <p class="event-meta">
+              <span>📅 October 2023</span>
+              <span>📍 Ahmedabad</span>
+            </p>
+            <p class="event-desc">
+              Interactive workshop exploring diverse Indian folk traditions.
+            </p>
+            <button class="event-gallery-btn" data-event="folkWorkshop">
+              View Gallery
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </section>
+
+</main>
+<!-- EVENT DETAILS MODAL -->
+<div id="eventDetailModal" class="event-modal">
+  <div class="event-modal-box">
+    <span class="event-close" id="closeEventDetail">&times;</span>
+    <h2 id="eventDetailTitle"></h2>
+    <p><strong>Date:</strong> <span id="eventDetailDate"></span></p>
+    <p><strong>Location:</strong> <span id="eventDetailLocation"></span></p>
+    <div id="eventDetailDesc"></div>
+    <button id="openEventGallery" class="event-primary-btn">View Gallery</button>
+  </div>
+</div>
+
+<!-- EVENT GALLERY MODAL -->
+<div id="eventGalleryModal" class="event-modal">
+  <div class="event-modal-box">
+    <span class="event-close" id="closeEventGallery">&times;</span>
+
+    <div class="event-carousel">
+      <button id="eventPrev">‹</button>
+      <img id="eventGalleryImage" src="" />
+      <button id="eventNext">›</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Contact -->
+<section class="section contact-section" id="contact">
+  <div class="container two-col">
+
+    <!-- LEFT -->
+    <div class="contact-text reveal-left">
+      <h2 class="section-title">Contact & Enquiries</h2>
+
+      <p>
+        For admissions, examinations, affiliations, franchise opportunities,
+        or event participation, feel free to reach out to us.
+      </p>
+
+      <!-- CONTACT DETAILS -->
+      <div class="contact-details">
+
+        <div class="contact-item">
+          <strong>Email</strong>
+          <a href="mailto:nrityabhartisangeetkalakendra@gmail.com">
+            info@nrityabhartisangeetkalakendra.org
+          </a>
+        </div>
+
+        <div class="contact-item">
+          <strong>Phone / WhatsApp</strong>
+          <a href="https://wa.me/918527002328" target="_blank">
+            +91 8527002328
+          </a>
+        </div>
+
+        <div class="contact-item">
+          <strong>Office Hours</strong>
+          <span>Mon – Sat | 10:00 AM – 6:00 PM</span>
+        </div>
+
+      </div>
+
+      <!-- QUICK ACTION BUTTONS -->
+      <div class="contact-actions">
+        <a href="https://wa.me/918527002328" target="_blank" class="btn btn-primary">
+          WhatsApp Chat
+        </a>
+        <a href="mailto:nrityabhartisangeetkalakendra@gmail.com" class="btn btn-ghost">
+          Send Email
+        </a>
+        <a href="#" class="btn btn-soft">
+          Live Chat (Coming Soon)
+        </a>
+      </div>
+
+      <!-- SERVICE CARDS -->
+      <div class="contact-cards">
+        <div class="mini-card">
+          <h4>Admissions</h4>
+          <p>Programs, eligibility & enrollment support.</p>
+        </div>
+        <div class="mini-card">
+          <h4>Examinations</h4>
+          <p>Syllabus, schedule & certification queries.</p>
+        </div>
+        <div class="mini-card">
+          <h4>Franchise & Affiliation</h4>
+          <p>Authorized center & partnership opportunities.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT FORM -->
+ <form id="contact-form" class="contact-form reveal-right">
+
+  <!-- Hidden: page source -->
+  <input type="hidden" name="source" value="website">
+
+  <input type="text" name="name" placeholder="Full Name" required>
+
+  <input type="email" name="email" placeholder="Email Address" required>
+
+  <input type="tel" name="phone" placeholder="Phone / WhatsApp" required>
+
+  <select name="interest" required>
+    <option value="">Interested In…</option>
+    <option>Admissions / Courses</option>
+    <option>Examinations & Certification</option>
+    <option>Franchise / Affiliation</option>
+    <option>Teacher Registration</option>
+    <option>Events / Competitions</option>
+    <option>Workshops / Training</option>
+    <option>General Enquiry</option>
+  </select>
+
+  <textarea name="message" rows="4" placeholder="Your Message"></textarea>
+
+  <button type="submit" class="btn btn-primary big">
+    Send Enquiry
+  </button>
+
+  <!-- status message -->
+  <p class="form-status" aria-live="polite"></p>
+</form>
+
+  </div>
+</section>
+
+<!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>Shagufta Kathak Nritya Kala Samiti</h4>
+        <p>Online Dance Classes · Events · Fashion Shows · Competitions</p>
+      </div>
+      <div class="footer-links">
+        <a href="#classes">Classes</a>
+        <a href="#events">Events</a>
+        <a href="#offer">Franchise</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-copy">© <span id="year"></span> Shagufta Kathak Nritya Kala Samiti. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <a class="to-top" href="#top" aria-label="Back to top">↑</a>
+
+<script>
+const eventsData = {
+  kathakWorkshop: {
+    title: "Kathak Intensive Workshop",
+    date: "Coming Soon",
+    location: "New Delhi",
+    description: "<p>Focused Kathak workshop on rhythm & expression.</p>",
+    gallery: [
+      "../assets/images/NB.png",
+      "../assets/images/NBSKKKLOGO.png"
+    ]
+  },
+  odissiFestival: {
+    title: "Odissi Dance Festival",
+    date: "January 2024",
+    location: "Jaipur",
+    description: "<p>Celebrating Odissi traditions.</p>",
+    gallery: [
+      "../assets/images/NB.png",
+      "../assets/images/satish/1.jpeg"
+    ]
+  },
+  bharatanatyamProgram: {
+  title: "Bharatanatyam Training Program",
+  date: "Coming Soon",
+  location: "Jamnagar",
+  description: "<p>Structured training for beginners & intermediate students.</p>",
+  gallery: [
+    "../assets/images/NB.png",
+    "../assets/images/NBSKKKLOGO.png"
+  ]
+},
+folkWorkshop: {
+  title: "Folk Dance Workshop",
+  date: "October 2023",
+  location: "Ahmedabad",
+  description: "<p>Interactive workshop exploring diverse Indian folk traditions.</p>",
+  gallery: [
+    "../assets/images/NB.png"
+    // Add more image paths if available
+  ]
+}
+};
+
+/* ELEMENTS */
+const detailModal = document.getElementById("eventDetailModal");
+const galleryModal = document.getElementById("eventGalleryModal");
+
+const titleEl = document.getElementById("eventDetailTitle");
+const dateEl = document.getElementById("eventDetailDate");
+const locEl = document.getElementById("eventDetailLocation");
+const descEl = document.getElementById("eventDetailDesc");
+
+const openGalleryBtn = document.getElementById("openEventGallery");
+const galleryImg = document.getElementById("eventGalleryImage");
+
+const prevBtn = document.getElementById("eventPrev");
+const nextBtn = document.getElementById("eventNext");
+
+let currentGallery = [];
+let currentIndex = 0;
+
+/* OPEN EVENT DETAILS */
+/* OPEN EVENT DETAILS (Upcoming Events Only) */
+document.querySelectorAll(".event-btn").forEach(btn => {
+  btn.onclick = () => {
+    const key = btn.dataset.event;
+    const e = eventsData[key];
+
+    titleEl.textContent = e.title;
+    dateEl.textContent = e.date;
+    locEl.textContent = e.location;
+    descEl.innerHTML = e.description;
+
+    openGalleryBtn.onclick = () => openGallery(key);
+
+    detailModal.style.display = "flex";
+    document.body.style.overflow = "hidden";
+  };
+});
+
+/* OPEN GALLERY DIRECTLY FROM PAST EVENTS */
+document.querySelectorAll(".event-gallery-btn").forEach(btn => {
+  btn.onclick = () => {
+    const key = btn.dataset.event;
+    openGallery(key);
+  };
+});
+
+
+/* OPEN GALLERY */
+function openGallery(key) {
+  const e = eventsData[key];
+  currentGallery = e.gallery;
+  currentIndex = 0;
+  updateImage();
+
+  detailModal.style.display = "none";
+  galleryModal.style.display = "flex";
+}
+
+/* UPDATE IMAGE */
+function updateImage() {
+  galleryImg.src = currentGallery[currentIndex];
+}
+
+/* NAV */
+prevBtn.onclick = () => {
+  currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+  updateImage();
+};
+
+nextBtn.onclick = () => {
+  currentIndex = (currentIndex + 1) % currentGallery.length;
+  updateImage();
+};
+
+/* CLOSE */
+document.getElementById("closeEventDetail").onclick = closeAll;
+document.getElementById("closeEventGallery").onclick = closeAll;
+
+function closeAll() {
+  detailModal.style.display = "none";
+  galleryModal.style.display = "none";
+  document.body.style.overflow = "";
+}
+</script>
+
+
+<script type="module" src="../js/main.js"></script>
+
+</body>
+</html>
