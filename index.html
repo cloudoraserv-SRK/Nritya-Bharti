@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
   <!-- Floating decorative shapes -->
@@ -19,39 +19,41 @@
  <!-- HEADER -->
 <header class="header">
   <div class="container header-bar">
-    <img src="NBSKKKLOGO.png" class="logo" alt="logo">
+    <img src="./assets/images/NBSKKKLOGO.png" class="logo" alt="logo">
     <button id="menuBtn" class="menu-btn">☰</button>
   </div>
 </header>
 
 <!-- SIDEBAR -->
+<!-- SIDEBAR -->
 <aside id="sidebar" class="sidebar">
   <button id="closeBtn" class="close-btn">✕</button>
 
   <ul class="menu">
-    <li><a href="#home" class="active">Home</a></li>
+    <li><a href="./index.html">Home</a></li>
 
     <li class="has-sub">
       <span>Explore Us</span>
       <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
       </ul>
     </li>
 
     <li class="has-sub">
       <span>Diploma Exam</span>
       <ul>
-        <li><a href="#">Apply</a></li>
-        <li><a href="#">Result</a></li>
+        <li><a href="./diploma/apply.html">Apply</a></li>
+        <li><a href="./diploma/result.html">Result</a></li>
       </ul>
     </li>
 
     <li class="has-sub">
       <span>Join With Us</span>
       <ul>
-        <li><a href="#classes">Classes</a></li>
-        <li><a href="#events">Events</a></li>
+        <li><a href="./join/franchise.html">Franchise</a></li>
+        <li><a href="./join/events.html">Events</a></li>
+        <li><a href="./join/classes.html">Classes</a></li>
       </ul>
     </li>
 
@@ -61,16 +63,24 @@
 
 <div id="overlay"></div>
 
-  <!-- Hero -->
- <section class="hero section" id="home">
+<!-- Hero -->
+<section class="hero section" id="home">
   <div class="container hero-grid">
+
+    <!-- LEFT : TEXT -->
     <div class="hero-text">
       <h1 class="title reveal-up">
-        Namaskar. <span class="grad">Swāgatam.</span>
+        Promoting <span class="grad">Cultural Education</span>
       </h1>
 
       <p class="subtitle reveal-up delay-1">
-        Welcome to a sacred space of <strong>Kala</strong> —  
+        A recognized institution dedicated to the preservation, promotion,
+        and certification of Indian music, dance, and fine arts through
+        structured learning and examinations.
+      </p>
+
+      <p class="subtitle reveal-up delay-1">
+        Welcome to a sacred space of <strong>Kala</strong> —
         where dance, sangeet, fine arts, and musical instruments are nurtured
         through tradition, discipline, and creative expression.
       </p>
@@ -81,241 +91,530 @@
       </div>
 
       <div class="hero-badges reveal-up delay-3">
-        <span class="badge">Dance · Music · Art</span>
-        <span class="badge">Vocal & Instruments</span>
-        <span class="badge">Beginner to Advanced</span>
+        <span class="badge">Music · Dance · Fine Arts</span>
+        <span class="badge">Certification & Examinations</span>
+        <span class="badge">Beginner to Diploma Level</span>
       </div>
     </div>
 
+    <!-- RIGHT : IMAGE -->
     <div class="hero-media">
       <div class="hero-card floaty">
-        <img src="NB.png" class="hero-img">
+        <img src="./assets/images/NB.png" class="hero-img" alt="Nritya Bharti Cultural Arts">
         <div class="shine"></div>
       </div>
     </div>
+
   </div>
 
-  <a href="#offer" class="ribbon pulse">
-    Cultural Learning Programs · Online & Offline
-  </a>
+  <!-- BOTTOM CTA -->
+  <div class="hero-cta">
+    <a href="#franchise" class="btn btn-primary">Our Franchise Program</a>
+    <a href="#contact" class="btn btn-ghost">Get Information</a>
+  </div>
 </section>
 
-  <!-- About -->
-  <section class="section" id="about">
+
+<!-- About -->
+<section class="section" id="about">
   <div class="container two-col">
+
+    <!-- LEFT: VIDEO PLACEHOLDER -->
     <div class="about-media reveal-left">
-      <img src="Saboutus.jpeg" alt="About us">
-      <p class="about-highlight">Being Honoured From</p>
+
+      <!-- Video placeholder (replace src later) -->
+      <div class="hero-card">
+        <video
+          class="hero-img"
+          controls
+          muted
+          poster="about-video-poster.jpg">
+          <source src="about-video-placeholder.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <p class="about-highlight">
+        Recognized & Honoured Cultural Institution
+      </p>
+    </div>
+
+    <!-- RIGHT: CONTENT -->
+    <div class="about-content reveal-right">
+      <h2 class="section-title">About the Organization</h2>
+
+      <p>
+        <strong>Nritya Bharti Sangeet Kala Kendra</strong> is a dedicated
+        cultural education institution working towards the preservation,
+        promotion, and structured learning of Indian classical, folk,
+        and contemporary art forms.
+      </p>
+
+      <p>
+        Our institution provides systematic training, academic guidance,
+        examinations, and certification programs for students, teachers,
+        and affiliated cultural centers across the country.
+      </p>
+
+      <!-- KEY POINTS -->
+      <ul class="ticks">
+        <li>Structured syllabus aligned with cultural learning standards</li>
+        <li>Certificate & diploma-level examination system</li>
+        <li>Qualified instructors, mentors, and examiners</li>
+        <li>National & international cultural programs and events</li>
+      </ul>
+
+      <!-- SUB-SECTIONS -->
+      <h3 class="section-subtitle">Our Vision</h3>
+      <p>
+        To create a strong foundation for cultural education by making
+        quality training and certification accessible to learners of
+        all age groups, while preserving the authenticity of Indian arts.
+      </p>
+
+      <h3 class="section-subtitle">Our Mission</h3>
+      <p>
+        To nurture talent through disciplined training, transparent
+        evaluation, and performance-based learning, encouraging students
+        to grow academically, artistically, and professionally.
+      </p>
+
+      <h3 class="section-subtitle">Scope of Activities</h3>
+      <ul class="ticks">
+        <li>Dance, music, and fine arts education programs</li>
+        <li>Examinations, assessments & certification</li>
+        <li>Workshops, seminars & teacher training</li>
+        <li>Cultural events, competitions & stage productions</li>
+      </ul>
+
     </div>
   </div>
-      <div class="about-content reveal-right">
-        <h2 class="section-title">About Us</h2>
+</section>
+
+<!-- =========================
+     FRANCHISE & AFFILIATION
+========================= -->
+<section class="section franchise" id="franchise">
+  <div class="container">
+
+    <h2 class="section-title text-center">
+      Franchise & Institutional Affiliation
+    </h2>
+
+    <p class="subtitle text-center">
+      Partner with <strong>Nritya Bharti Sangeet Kala Kendra</strong> as an
+      <strong>Authorized Franchise Center</strong> and offer recognized
+      certifications, examinations, and cultural opportunities at
+      national and international levels.
+    </p>
+
+    <!-- TOP GRID -->
+    <div class="franchise-hero-grid">
+
+      <!-- LEFT -->
+      <div class="franchise-info reveal-up">
+        <h3>Why Partner With Us?</h3>
         <p>
-          At <strong>Shagufta Kathak Nritya Kala Samiti</strong>, we bring classical finesse
-          and modern pedagogy together. From <em>Kathak</em> to folk, Bollywood, and
-          contemporary, our online classes are designed for all ages and levels.
+          Our franchise model empowers educators, academies, and cultural
+          institutions to operate as officially recognized centers while
+          delivering structured cultural education with credibility and growth.
         </p>
-        <p>
-          Our director has been honoured internationally as an
-          <strong>“International Kathak Dance Principal.”</strong> Learn from the best and
-          perform with confidence on any stage.
-        </p>
+
         <ul class="ticks">
-          <li>Structured curriculums & certifications</li>
-          <li>Live interactive online sessions</li>
-          <li>Events, fashion shows & competitions</li>
-          <li>Personalized feedback & performance opportunities</li>
+          <li>Authority to issue participation & certification certificates</li>
+          <li>Access to national & international examinations</li>
+          <li>Recognized affiliation under a cultural institution</li>
+          <li>Structured syllabus, evaluation & academic support</li>
+          <li>Growth through events, competitions & workshops</li>
         </ul>
       </div>
-    </div>
-  </section>
 
-  <!-- Classes / Services Slider -->
-  <section class="section" id="classes">
-    <div class="container">
-      <h2 class="section-title center">Our Online Classes & Services</h2>
-
-      <div class="slider-wrap">
-        <button class="slider-btn prev" aria-label="Previous" data-target="#classesSlider">❮</button>
-        <div class="slider" id="classesSlider" tabindex="0">
-          <!-- Card 1 -->
-          <article class="card pop">
-           <img src="kathakcard.jpg" alt="Folk & Garba">
-            <div class="card-body">
-              <h3>Kathak (Beginner · Intermediate · Advanced)</h3>
-              <p>Authentic training, footwork, spins, abhinaya & stage readiness.</p>
-              <a href="#contact" class="link">Book a Trial →</a>
-            </div>
-          </article>
-          <!-- Card 2 -->
-          <article class="card pop">
-            <img src="garbacard.webp" alt="Folk & Garba">
-            <div class="card-body">
-              <h3>Folk: Garba & Dandiya</h3>
-              <p>Festive choreographies, group formations & stamina drills.</p>
-              <a href="#offer" class="link">Navratri Special →</a>
-            </div>
-          </article>
-          <!-- Card 3 -->
-          <article class="card pop">
-            <img src="Bollywood.webp" alt="Bollywood">
-            <div class="card-body">
-              <h3>Bollywood & Semi-Classical</h3>
-              <p>Trending routines blended with classical grace.</p>
-              <a href="#contact" class="link">Join Batch →</a>
-            </div>
-          </article>
-          <!-- Card 4 -->
-          <article class="card pop">
-            <img src="kidsdance.webp" alt="Kids Program">
-            <div class="card-body">
-              <h3>Kids Dance Program</h3>
-              <p>Fun, discipline & creativity for ages 5–12.</p>
-              <a href="#contact" class="link">Enroll Kids →</a>
-            </div>
-          </article>
-          <!-- Card 5 -->
-          <article class="card pop">
-            <img src="wedding.jpg" alt="Wedding Choreo">
-            <div class="card-body">
-              <h3>Wedding & Sangeet Choreography</h3>
-              <p>Made-to-measure performances for your big day.</p>
-              <a href="#contact" class="link">Plan Now →</a>
-            </div>
-          </article>
-          <!-- Card 6 -->
-          <article class="card pop">
-            <img src="events2.jpg" alt="Events & Shows">
-            <div class="card-body">
-              <h3>Events · Fashion Shows · Competitions</h3>
-              <p>We organize & host stunning cultural productions.</p>
-              <a href="#events" class="link">See Events →</a>
-            </div>
-          </article>
-        </div>
-        <button class="slider-btn next" aria-label="Next" data-target="#classesSlider">❯</button>
-      </div>
-      <p class="hint center">Tip: Use arrow buttons or swipe/drag to scroll</p>
-    </div>
-  </section>
-
-  <!-- Offer Banner -->
-  <section class="offer section" id="offer">
-    <div class="container offer-grid">
-      <div class="offer-text reveal-up">
-        <h2 class="section-title">Celebrate the SEASON OF WEDDING and SURPRISE your Loved Ones with our Special Wedding Dance Speacial Class</h2>
-        <p class="lead">
-          Celebrate the spirit of this Wedding Season with a vibrant 10-day- Online class/workshop!
+      <!-- RIGHT -->
+      <div class="franchise-highlight reveal-up delay-1">
+        <h4>Who Can Apply?</h4>
+        <p>
+          Dance schools, music academies, fine arts institutions,
+          individual teachers, NGOs, and cultural organizations
+          committed to quality education.
         </p>
-        <ul class="ticks">
-          <li>Daily 45–60 min live sessions</li>
-          <li>Beginner friendly steps to advanced combos</li>
-          <li>Performance-ready routine by Day 10</li>
-        </ul>
-        <div class="price-tag glow">
-          <span>Only</span>
-          <strong>₹249</strong>
-          <small>/ 10 days</small>
-        </div>
-        <a href="#contact" class="btn btn-primary big">Enroll Now</a>
+
+        <a href="franchise-application.html" class="btn btn-primary big">
+          Apply for Franchise
+        </a>
       </div>
-      <div class="offer-media reveal-up delay-1">
-        <img src="Snavratra.png" alt="Dandiya" class="rounded-img">
+
+    </div>
+
+  </div>
+</section>
+<!-- =========================
+     FRANCHISE BENEFITS
+========================= -->
+<section class="section franchise-benefits">
+  <div class="container">
+
+    <h2 class="section-title text-center">
+      Franchise Benefits Comparison
+    </h2>
+
+    <div class="benefits-table">
+
+      <div class="benefit-header">Features</div>
+      <div class="benefit-header highlight">Authorized Franchise</div>
+      <div class="benefit-header">Non-Affiliated Institute</div>
+
+      <div>Certification Authority</div>
+      <div class="yes">✔ Authorized Certificates</div>
+      <div class="no">✖ Not Recognized</div>
+
+      <div>Examination Access</div>
+      <div class="yes">✔ National & International</div>
+      <div class="no">✖ Limited / Local</div>
+
+      <div>Structured Syllabus</div>
+      <div class="yes">✔ Provided</div>
+      <div class="no">✖ Self-Designed</div>
+
+      <div>Brand Recognition</div>
+      <div class="yes">✔ Institutional Credibility</div>
+      <div class="no">✖ No Authority</div>
+
+      <div>Events & Competitions</div>
+      <div class="yes">✔ Official Participation</div>
+      <div class="no">✖ Restricted</div>
+
+    </div>
+
+  </div>
+</section>
+<!-- =========================
+     HOW TO APPLY
+========================= -->
+<section class="section franchise-steps">
+  <div class="container">
+
+    <h2 class="section-title text-center">
+      How to Become a Franchise Partner
+    </h2>
+
+    <div class="steps-grid">
+
+      <div class="step-card reveal-up">
+        <span>01</span>
+        <h4>Submit Application</h4>
+        <p>Fill out the franchise application form with your institute details.</p>
+      </div>
+
+      <div class="step-card reveal-up delay-1">
+        <span>02</span>
+        <h4>Review & Approval</h4>
+        <p>Our academic team reviews eligibility and documentation.</p>
+      </div>
+
+      <div class="step-card reveal-up delay-2">
+        <span>03</span>
+        <h4>Affiliation Confirmation</h4>
+        <p>Receive official authorization and affiliation credentials.</p>
+      </div>
+
+      <div class="step-card reveal-up delay-3">
+        <span>04</span>
+        <h4>Start Certification</h4>
+        <p>Enroll students, conduct exams & issue authorized certificates.</p>
+      </div>
+
+    </div>
+
+    <div class="franchise-cta">
+      <a href="franchise-application.html" class="btn btn-primary big">
+        Franchise Application Form
+      </a>
+      <a href="#contact" class="btn btn-ghost">
+        Talk to Our Team
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Programs / Courses Slider -->
+<section class="section" id="classes">
+  <div class="container">
+
+    <h2 class="section-title center">
+      Programs, Courses & Cultural Activities
+    </h2>
+
+    <p class="subtitle center">
+      Structured learning pathways, certification programs, and cultural
+      opportunities designed for students, educators, and institutions.
+    </p>
+
+    <div class="slider-wrap">
+      <button class="slider-btn prev" aria-label="Previous" data-target="#classesSlider">❮</button>
+
+      <div class="slider" id="classesSlider" tabindex="0">
+
+        <!-- Card 1 -->
+        <article class="card program-card">
+          <img src="./assets/images/home/classic.jpeg" alt="Classical Dance Programs">
+          <div class="card-body">
+            <h3>Classical Dance Programs</h3>
+            <p>
+              Comprehensive training in Indian classical dance forms with
+              structured syllabus and certification support.
+            </p>
+            <a href="#contact" class="link">Explore Program →</a>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="card program-card">
+          <img src="./assets/images/home/folk.jpeg" alt="Folk Dance Programs">
+          <div class="card-body">
+            <h3>Folk & Traditional Dance</h3>
+            <p>
+              Regional and folk dance forms focusing on performance,
+              cultural understanding, and examinations.
+            </p>
+            <a href="#contact" class="link">View Details →</a>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="card program-card">
+          <img src="./assets/images/home/vocal.jpeg" alt="Music Training">
+          <div class="card-body">
+            <h3>Music & Vocal Training</h3>
+            <p>
+              Indian classical, semi-classical, and light music programs
+              for all age groups.
+            </p>
+            <a href="#contact" class="link">Join Program →</a>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="card program-card">
+          <img src="./assets/images/home/child.jpeg" alt="Children Programs">
+          <div class="card-body">
+            <h3>Children’s Cultural Programs</h3>
+            <p>
+              Foundation-level courses designed to nurture discipline,
+              creativity, and confidence in young learners.
+            </p>
+            <a href="#contact" class="link">Enroll Now →</a>
+          </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="card program-card">
+          <img src="./assets/images/home/workshop.jpeg" alt="Workshops">
+          <div class="card-body">
+            <h3>Workshops & Special Training</h3>
+            <p>
+              Short-term workshops, seasonal programs, and intensive
+              skill-development modules.
+            </p>
+            <a href="#contact" class="link">Upcoming Workshops →</a>
+          </div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="card program-card">
+          <img src="./assets/images/home/event.jpeg" alt="Events & Productions">
+          <div class="card-body">
+            <h3>Events & Cultural Productions</h3>
+            <p>
+              Stage performances, competitions, festivals, and cultural
+              collaborations at national & international levels.
+            </p>
+            <a href="#events" class="link">View Events →</a>
+          </div>
+        </article>
+
+      </div>
+
+      <button class="slider-btn next" aria-label="Next" data-target="#classesSlider">❯</button>
+    </div>
+
+    <p class="hint center">
+      Tip: Use arrow buttons or swipe to explore programs
+    </p>
+
+  </div>
+</section>
+
+<!-- =========================
+     EVENTS & ACADEMIC ACTIVITIES
+========================= -->
+<section class="section events" id="events">
+  <div class="container">
+
+    <h2 class="section-title center">
+      Cultural Events & Academic Activities
+    </h2>
+
+    <p class="subtitle center">
+      Showcasing talent, encouraging excellence, and promoting cultural
+      exchange through performances, competitions, and collaborations.
+    </p>
+
+    <div class="slider-wrap events-slider-wrap">
+      <button class="slider-btn prev" aria-label="Previous" data-target="#eventsSlider">❮</button>
+
+      <div class="slider events-slider" id="eventsSlider" tabindex="0">
+
+        <!-- Event 1 -->
+        <article class="event-card">
+          <img src="./assets/images/home/annual.jpeg" alt="Annual Cultural Showcase">
+          <div class="event-content">
+            <h3>Annual Cultural Showcase</h3>
+            <p>
+              A grand मंच where students and performers present classical,
+              folk, and contemporary productions before a distinguished audience.
+            </p>
+          </div>
+        </article>
+
+        <!-- Event 2 -->
+        <article class="event-card">
+          <img src="https://images.unsplash.com/photo-1485988412941-77a35537dae4?q=80&w=1200&auto=format&fit=crop" alt="Fashion Show Collaborations">
+          <div class="event-content">
+            <h3>Fashion Show Collaborations</h3>
+            <p>
+              Artistic choreography and stage coordination for fashion
+              designers, exhibitions, and themed cultural showcases.
+            </p>
+          </div>
+        </article>
+
+        <!-- Event 3 -->
+        <article class="event-card">
+          <img src="https://images.unsplash.com/photo-1484255274991-0b33ef6aae66?q=80&w=1200&auto=format&fit=crop" alt="Inter-school Competitions">
+          <div class="event-content">
+            <h3>Inter-School & Institutional Competitions</h3>
+            <p>
+              Academic and performance-based competitions designed to
+              encourage discipline, confidence, and excellence.
+            </p>
+          </div>
+        </article>
+
+      </div>
+
+      <button class="slider-btn next" aria-label="Next" data-target="#eventsSlider">❯</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="section contact-section" id="contact">
+  <div class="container two-col">
+
+    <!-- LEFT -->
+    <div class="contact-text reveal-left">
+      <h2 class="section-title">Contact & Enquiries</h2>
+
+      <p>
+        For admissions, examinations, affiliations, franchise opportunities,
+        or event participation, feel free to reach out to us.
+      </p>
+
+      <!-- CONTACT DETAILS -->
+      <div class="contact-details">
+
+        <div class="contact-item">
+          <strong>Email</strong>
+          <a href="mailto:nrityabhartisangeetkalakendra@gmail.com">
+            info@nrityabhartisangeetkalakendra.org
+          </a>
+        </div>
+
+        <div class="contact-item">
+          <strong>Phone / WhatsApp</strong>
+          <a href="https://wa.me/918527002328" target="_blank">
+            +91 8527002328
+          </a>
+        </div>
+
+        <div class="contact-item">
+          <strong>Office Hours</strong>
+          <span>Mon – Sat | 10:00 AM – 6:00 PM</span>
+        </div>
+
+      </div>
+
+      <!-- QUICK ACTION BUTTONS -->
+      <div class="contact-actions">
+        <a href="https://wa.me/918527002328" target="_blank" class="btn btn-primary">
+          WhatsApp Chat
+        </a>
+        <a href="mailto:nrityabhartisangeetkalakendra@gmail.com" class="btn btn-ghost">
+          Send Email
+        </a>
+        <a href="#" class="btn btn-soft">
+          Live Chat (Coming Soon)
+        </a>
+      </div>
+
+      <!-- SERVICE CARDS -->
+      <div class="contact-cards">
+        <div class="mini-card">
+          <h4>Admissions</h4>
+          <p>Programs, eligibility & enrollment support.</p>
+        </div>
+        <div class="mini-card">
+          <h4>Examinations</h4>
+          <p>Syllabus, schedule & certification queries.</p>
+        </div>
+        <div class="mini-card">
+          <h4>Franchise & Affiliation</h4>
+          <p>Authorized center & partnership opportunities.</p>
+        </div>
       </div>
     </div>
-  </section>
 
-  <!-- Events -->
-  <section class="section" id="events">
-    <div class="container">
-      <h2 class="section-title center">Events, Programs & Competitions</h2>
-      <div class="slider-wrap thin">
-        <button class="slider-btn prev" aria-label="Previous" data-target="#eventsSlider">❮</button>
-        <div class="slider tall" id="eventsSlider" tabindex="0">
-          <article class="event card glow-soft">
-            <img src="https://images.unsplash.com/photo-1562549990-57c276ecf7e5?q=80&w=1200&auto=format&fit=crop" alt="Stage Show">
-            <div class="card-body">
-              <h3>Annual Cultural Showcase</h3>
-              <p>Our performers light up the stage with classical & fusion acts.</p>
-            </div>
-          </article>
-          <article class="event card glow-soft">
-            <img src="https://images.unsplash.com/photo-1485988412941-77a35537dae4?q=80&w=1200&auto=format&fit=crop" alt="Fashion Show">
-            <div class="card-body">
-              <h3>Fashion Show Collabs</h3>
-              <p>Choreography & runway coordination with designers.</p>
-            </div>
-          </article>
-          <article class="event card glow-soft">
-            <img src="https://images.unsplash.com/photo-1484255274991-0b33ef6aae66?q=80&w=1200&auto=format&fit=crop" alt="Competition">
-            <div class="card-body">
-              <h3>Inter-school Dance Competitions</h3>
-              <p>We organize, judge & train teams for competitive excellence.</p>
-            </div>
-          </article>
-        </div>
-        <button class="slider-btn next" aria-label="Next" data-target="#eventsSlider">❯</button>
-      </div>
-    </div>
-  </section>
+    <!-- RIGHT FORM -->
+ <form id="contact-form" class="contact-form reveal-right">
 
-  <!-- Gallery -->
-  <section class="section" id="gallery">
-    <div class="container">
-      <h2 class="section-title center">Gallery</h2>
-      <div class="masonry">
-        <img src="https://images.unsplash.com/photo-1517103883510-7f592a77cee1?q=80&w=800&auto=format&fit=crop" alt="Gallery 1">
-        <img src="https://images.unsplash.com/photo-1548215163-4aaa44a0b077?q=80&w=800&auto=format&fit=crop" alt="Gallery 2">
-        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=800&auto=format&fit=crop" alt="Gallery 3">
-        <img src="https://images.unsplash.com/photo-1518806118471-f28b20a1d79d?q=80&w=800&auto=format&fit=crop" alt="Gallery 4">
-        <img src="https://images.unsplash.com/photo-1506784242126-2a0b0b89c56a?q=80&w=800&auto=format&fit=crop" alt="Gallery 5">
-        <img src="https://images.unsplash.com/photo-1514846224493-06b7499f0b02?q=80&w=800&auto=format&fit=crop" alt="Gallery 6">
-      </div>
-    </div>
-  </section>
+  <!-- Hidden: page source -->
+  <input type="hidden" name="source" value="website">
 
-  <!-- Contact -->
-  <section class="section" id="contact">
-    <div class="container two-col">
-      <div class="contact-text reveal-left">
-        <h2 class="section-title">Contact & Enroll</h2>
-        <p>Have questions or want to register? Send us a message and we’ll get back to you.</p>
-        <div class="contact-cards">
-          <div class="mini-card">
-            <h4>Quick Enquiry</h4>
-            <p>WhatsApp us or fill the form to book your spot.</p>
-          </div>
-          <div class="mini-card">
-            <h4>Online Classes</h4>
-            <p>Zoom/Meet links shared after enrollment.</p>
-          </div>
-          <div class="mini-card">
-            <h4>Events & Shows</h4>
-            <p>We plan end-to-end production with your vision.</p>
-          </div>
-        </div>
-      </div>
-      <form id="contact-form">
   <input type="text" name="name" placeholder="Full Name" required>
+
   <input type="email" name="email" placeholder="Email Address" required>
+
   <input type="tel" name="phone" placeholder="Phone / WhatsApp" required>
+
   <select name="interest" required>
     <option value="">Interested In…</option>
-    <option>Kathak Classes</option>
-    <option>Folk / Dandiya</option>
-    <option>Bollywood / Semi-Classical</option>
-    <option>Kids Program</option>
-    <option>Wedding Choreography</option>
-    <option>Events / Shows</option>
-    <option>Competitions</option>
+    <option>Admissions / Courses</option>
+    <option>Examinations & Certification</option>
+    <option>Franchise / Affiliation</option>
+    <option>Teacher Registration</option>
+    <option>Events / Competitions</option>
+    <option>Workshops / Training</option>
+    <option>General Enquiry</option>
   </select>
-  <textarea name="message" rows="4" placeholder="Your Message"></textarea>
-  <button type="submit">Send Enquiry</button>
-</form>
-    </div>
-  </section>
 
-  <!-- Footer -->
+  <textarea name="message" rows="4" placeholder="Your Message"></textarea>
+
+  <button type="submit" class="btn btn-primary big">
+    Send Enquiry
+  </button>
+
+  <!-- status message -->
+  <p class="form-status" aria-live="polite"></p>
+</form>
+
+
+  </div>
+</section>
+
+<!-- Footer -->
   <footer class="footer">
     <div class="container footer-grid">
       <div>
@@ -325,7 +624,7 @@
       <div class="footer-links">
         <a href="#classes">Classes</a>
         <a href="#events">Events</a>
-        <a href="#offer">Navratri Offer</a>
+        <a href="#offer">Franchise</a>
         <a href="#contact">Contact</a>
       </div>
       <div class="footer-copy">© <span id="year"></span> Shagufta Kathak Nritya Kala Samiti. All rights reserved.</div>
@@ -334,6 +633,7 @@
 
   <a class="to-top" href="#top" aria-label="Back to top">↑</a>
 
-  <script src="script.js"></script>
+<script type="module" src="./js/main.js"></script>
+
 </body>
 </html>
