@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nritya Bharti Sangeet Kala kendra</title>
+  <meta name="description" content="Specialists in Online Dance Classes, Events, Fashion Shows & Competitions. Navratri Special: 10 Days Dandiya Class @ ₹249." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="../css/style.css">
+  
+</head>
+<body>
+  <!-- Floating decorative shapes -->
+  <div class="float-deco deco-1"></div>
+  <div class="float-deco deco-2"></div>
+  <div class="float-deco deco-3"></div>
+
+ <!-- HEADER -->
+<header class="header">
+  <div class="container header-bar">
+    <img src="../assets/images/NBSKKKLOGO.png" class="logo" alt="logo">
+    <button id="menuBtn" class="menu-btn">☰</button>
+  </div>
+</header>
+
+<!-- SIDEBAR -->
+<!-- SIDEBAR -->
+<aside id="sidebar" class="sidebar">
+  <button id="closeBtn" class="close-btn">✕</button>
+
+  <ul class="menu">
+    <li><a href="../index.html">Home</a></li>
+
+    <li class="has-sub">
+      <span>Explore Us</span>
+      <ul>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../gallery.html">Gallery</a></li>
+      </ul>
+    </li>
+
+    <li class="has-sub">
+      <span>Diploma Exam</span>
+      <ul>
+        <li><a href="../diploma/apply.html">Apply</a></li>
+        <li><a href="../diploma/result.html">Result</a></li>
+      </ul>
+    </li>
+
+    <li class="has-sub">
+      <span>Join With Us</span>
+      <ul>
+        <li><a href="../join/franchise.html">Franchise</a></li>
+        <li><a href="../join/events.html">Events</a></li>
+        <li><a href="../join/classes.html">Classes</a></li>
+      </ul>
+    </li>
+
+    <li><a href="#contact">Need Help</a></li>
+  </ul>
+</aside>
+
+<div id="overlay"></div>
+
+<!-- Main -->
+<main class="content">
+  <section class="apply-section">
+    <h1>Diploma / Course Application Form</h1>
+    <p class="form-subtitle">
+      Apply as a Student or Teacher for our Dance & Music Programs
+    </p>
+
+    <form class="form-box" id="applicationForm">
+
+      <!-- Role -->
+      <div class="form-group">
+        <label>Applying As</label>
+        <select name="role" required>
+          <option value="">Select Role</option>
+          <option value="student">Student</option>
+          <option value="teacher">Teacher</option>
+        </select>
+      </div>
+
+      <!-- Personal Details -->
+      <div class="form-row">
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" name="full_name" placeholder="Enter full name" required>
+        </div>
+
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" name="email" placeholder="Enter email" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Mobile Number</label>
+          <input type="tel" name="phone" placeholder="Enter mobile number" required>
+        </div>
+
+        <div class="form-group">
+          <label>Date of Birth</label>
+          <input type="date" name="dob">
+        </div>
+      </div>
+
+      <!-- Course Category -->
+      <div class="form-group">
+        <label>Category of Interest</label>
+        <select name="category" required>
+          <option value="">Select Category</option>
+          <option value="kathak">Kathak</option>
+          <option value="bharatanatyam">Bharatanatyam</option>
+          <option value="odissi">Odissi</option>
+          <option value="vocal">Vocal Music</option>
+          <option value="instrumental">Instrumental Music</option>
+          <option value="folk">Folk Dance</option>
+          <option value="folk">Western Dance</option>
+        </select>
+      </div>
+
+      <!-- Level -->
+      <div class="form-group">
+        <label>Level</label>
+        <select name="level">
+          <option value="">Select Level</option>
+          <option value="beginner">Beginner</option>
+          <option value="intermediate">Intermediate</option>
+          <option value="advanced">Advanced</option>
+        </select>
+      </div>
+
+      <!-- Address -->
+      <div class="form-group">
+        <label>Address</label>
+        <textarea name="address" rows="3" placeholder="House No, Street, Area"></textarea>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>City</label>
+          <input type="text" name="city">
+        </div>
+
+        <div class="form-group">
+          <label>State</label>
+          <input type="text" name="state">
+        </div>
+
+        <div class="form-group">
+          <label>Pincode</label>
+          <input type="text" name="pincode">
+        </div>
+      </div>
+
+      <!-- Additional Info -->
+      <div class="form-group">
+        <label>Previous Experience (if any)</label>
+        <textarea name="experience" rows="3" placeholder="Brief experience details"></textarea>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit" class="submit-btn">
+        Submit Application
+      </button>
+
+    </form>
+  </section>
+</main>
+
+<!-- Contact -->
+<section class="section contact-section" id="contact">
+  <div class="container two-col">
+
+    <!-- LEFT -->
+    <div class="contact-text reveal-left">
+      <h2 class="section-title">Contact & Enquiries</h2>
+
+      <p>
+        For admissions, examinations, affiliations, franchise opportunities,
+        or event participation, feel free to reach out to us.
+      </p>
+
+      <!-- CONTACT DETAILS -->
+      <div class="contact-details">
+
+        <div class="contact-item">
+          <strong>Email</strong>
+          <a href="mailto:nrityabhartisangeetkalakendra@gmail.com">
+            info@nrityabhartisangeetkalakendra.org
+          </a>
+        </div>
+
+        <div class="contact-item">
+          <strong>Phone / WhatsApp</strong>
+          <a href="https://wa.me/918527002328" target="_blank">
+            +91 8527002328
+          </a>
+        </div>
+
+        <div class="contact-item">
+          <strong>Office Hours</strong>
+          <span>Mon – Sat | 10:00 AM – 6:00 PM</span>
+        </div>
+
+      </div>
+
+      <!-- QUICK ACTION BUTTONS -->
+      <div class="contact-actions">
+        <a href="https://wa.me/918527002328" target="_blank" class="btn btn-primary">
+          WhatsApp Chat
+        </a>
+        <a href="mailto:nrityabhartisangeetkalakendra@gmail.com" class="btn btn-ghost">
+          Send Email
+        </a>
+        <a href="#" class="btn btn-soft">
+          Live Chat (Coming Soon)
+        </a>
+      </div>
+
+      <!-- SERVICE CARDS -->
+      <div class="contact-cards">
+        <div class="mini-card">
+          <h4>Admissions</h4>
+          <p>Programs, eligibility & enrollment support.</p>
+        </div>
+        <div class="mini-card">
+          <h4>Examinations</h4>
+          <p>Syllabus, schedule & certification queries.</p>
+        </div>
+        <div class="mini-card">
+          <h4>Franchise & Affiliation</h4>
+          <p>Authorized center & partnership opportunities.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT FORM -->
+ <form id="contact-form" class="contact-form reveal-right">
+
+  <!-- Hidden: page source -->
+  <input type="hidden" name="source" value="website">
+
+  <input type="text" name="name" placeholder="Full Name" required>
+
+  <input type="email" name="email" placeholder="Email Address" required>
+
+  <input type="tel" name="phone" placeholder="Phone / WhatsApp" required>
+
+  <select name="interest" required>
+    <option value="">Interested In…</option>
+    <option>Admissions / Courses</option>
+    <option>Examinations & Certification</option>
+    <option>Franchise / Affiliation</option>
+    <option>Teacher Registration</option>
+    <option>Events / Competitions</option>
+    <option>Workshops / Training</option>
+    <option>General Enquiry</option>
+  </select>
+
+  <textarea name="message" rows="4" placeholder="Your Message"></textarea>
+
+  <button type="submit" class="btn btn-primary big">
+    Send Enquiry
+  </button>
+
+  <!-- status message -->
+  <p class="form-status" aria-live="polite"></p>
+</form>
+
+  </div>
+</section>
+
+<!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>Shagufta Kathak Nritya Kala Samiti</h4>
+        <p>Online Dance Classes · Events · Fashion Shows · Competitions</p>
+      </div>
+      <div class="footer-links">
+        <a href="#classes">Classes</a>
+        <a href="#events">Events</a>
+        <a href="#offer">Franchise</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-copy">© <span id="year"></span> Shagufta Kathak Nritya Kala Samiti. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <a class="to-top" href="#top" aria-label="Back to top">↑</a>
+
+<script type="module" src="../js/main.js"></script>
+
+</body>
+</html>
