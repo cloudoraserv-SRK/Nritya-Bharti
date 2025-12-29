@@ -1,0 +1,1229 @@
+/* ==================================================
+   GLOBAL THEME – CULTURAL INSTITUTION
+================================================== */
+
+:root{
+  --bg:#fbf7f2;
+  --surface:#ffffff;
+  --text:#2a1d1d;
+  --muted:#6b5b5b;
+
+  --brand1:#7a1f2b;     /* Royal Maroon */
+  --brand2:#c89b3c;     /* Antique Gold */
+
+  --radius:18px;
+  --radius-lg:26px;
+
+  --shadow-sm:0 6px 16px rgba(0,0,0,.08);
+  --shadow-md:0 14px 34px rgba(0,0,0,.14);
+  --shadow-lg:0 30px 70px rgba(0,0,0,.18);
+}
+
+*{box-sizing:border-box}
+html,body{
+  margin:0;
+  padding:0;
+  scroll-behavior:smooth;
+  background:var(--bg);
+  color:var(--text);
+  font-family:Poppins,system-ui;
+}
+
+/* ==================================================
+   LAYOUT
+================================================== */
+
+.container{
+  width:min(1200px,92vw);
+  margin:auto;
+}
+
+.section{
+  padding:100px 0;
+}
+
+/* ==================================================
+   TYPOGRAPHY – CULTURAL & READABLE
+================================================== */
+
+/* MAIN PAGE TITLE (Hero / Page Headings) */
+.title{
+  font-family:"Playfair Display", serif;
+  font-size:clamp(2.8rem, 5vw, 4.2rem);
+  line-height:1.12;
+  letter-spacing:.4px;
+  margin-bottom:18px;
+  color:var(--brand1);
+}
+
+/* SUBTITLE / INTRO TEXT */
+.subtitle{
+  font-size:1.25rem;          /* BIGGER */
+  line-height:1.85;           /* AIRY */
+  max-width:720px;
+  color:var(--muted);
+  font-weight:400;
+}
+
+/* SECTION HEADINGS */
+.section-title{
+  font-family:"Playfair Display", serif;
+  font-size:clamp(2.1rem, 3vw, 2.6rem);
+  line-height:1.25;
+  color:var(--brand1);
+  margin-bottom:26px;
+  position:relative;
+}
+
+/* subtle divider under section titles */
+.section-title::after{
+  content:"";
+  display:block;
+  width:56px;
+  height:3px;
+  margin-top:10px;
+  background:linear-gradient(
+    90deg,
+    var(--brand2),
+    rgba(200,155,60,.25)
+  );
+  border-radius:3px;
+}
+
+/* BODY PARAGRAPHS */
+p{
+  font-size:1.18rem;          /* OPTIMAL READ SIZE */
+  line-height:1.95;           /* VERY COMFORTABLE */
+  color:#3b2a2a;
+  margin-bottom:18px;
+  font-weight:400;
+}
+
+/* EMPHASIS TEXT */
+p strong{
+  font-weight:600;
+  color:var(--brand1);
+}
+
+/* SMALL / MUTED TEXT */
+.small-text{
+  font-size:.95rem;
+  color:var(--muted);
+}
+
+/* CENTERED TEXT UTILITY */
+.text-center{
+  text-align:center;
+}
+
+/* RESPONSIVE TWEAKS */
+@media (max-width: 768px){
+  .title{
+    font-size:clamp(2.4rem, 7vw, 3.2rem);
+  }
+
+  .subtitle{
+    font-size:1.15rem;
+  }
+
+  p{
+    font-size:1.08rem;
+    line-height:1.85;
+  }
+}
+
+/* ==================================================
+   BUTTONS
+================================================== */
+/* ==================================================
+   HERO CTA – CENTERED & ATTRACTIVE
+================================================== */
+
+.hero-cta{
+  display:flex;
+  justify-content:center;      /* CENTER ALIGN */
+  align-items:center;
+  gap:22px;                    /* EVEN SPACING */
+  margin-top:36px;
+  flex-wrap:wrap;
+}
+
+/* Slight entrance animation */
+.hero-cta .btn{
+  animation:ctaFadeUp .8s ease both;
+}
+
+.hero-cta .btn:nth-child(2){
+  animation-delay:.12s;
+}
+
+@keyframes ctaFadeUp{
+  from{
+    opacity:0;
+    transform:translateY(14px);
+  }
+  to{
+    opacity:1;
+    transform:none;
+  }
+}
+
+/* Mobile adjustment */
+@media (max-width:768px){
+  .hero-cta{
+    flex-direction:column;
+    gap:16px;
+  }
+
+  .hero-cta .btn{
+    width:100%;               /* FULL WIDTH ON MOBILE */
+    max-width:320px;
+  }
+}
+
+/* ==================================================
+   BUTTONS – CULTURAL PREMIUM (V3)
+================================================== */
+
+.btn{
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+
+  padding:14px 32px;
+  border-radius:999px;
+
+  font-weight:600;
+  font-size:1.05rem;
+  letter-spacing:.3px;
+
+  text-decoration:none;
+  cursor:pointer;
+  border:none;
+
+  transition:
+    transform .35s ease,
+    box-shadow .35s ease,
+
+    color .4s ease;
+
+  isolation:isolate;
+}
+
+/* =========================
+   PRIMARY BUTTON
+========================= */
+
+.btn-primary{
+  background:
+    linear-gradient(
+      135deg,
+      var(--brand1),
+      var(--brand2)
+    );
+  color:#fff;
+
+  box-shadow:
+    0 12px 26px rgba(122,31,43,.35),
+    inset 0 0 0 1px rgba(255,255,255,.25);
+}
+
+/* shimmer highlight */
+.btn-primary::after{
+  content:"";
+  position:absolute;
+  inset:-50%;
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(255,255,255,.45),
+      transparent 55%
+    );
+  opacity:.0;
+  transition:.45s ease;
+  z-index:-1;
+}
+
+/* hover */
+.btn-primary:hover{
+  transform:translateY(-4px);
+  box-shadow:
+    0 20px 46px rgba(122,31,43,.45);
+}
+
+.btn-primary:hover::after{
+  opacity:1;
+}
+
+/* active click */
+.btn-primary:active{
+  transform:translateY(-1px) scale(.98);
+}
+
+/* =========================
+   GHOST / OUTLINE BUTTON
+========================= */
+
+.btn-ghost{
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.95),
+      rgba(255,255,255,.8)
+    );
+  color:var(--brand1);
+
+  border:2px solid var(--brand1);
+
+  box-shadow:
+    0 8px 18px rgba(0,0,0,.12);
+}
+
+/* inner ornamental frame */
+.btn-ghost::before{
+  content:"";
+  position:absolute;
+  inset:4px;
+  border-radius:999px;
+  border:1px dashed rgba(122,31,43,.35);
+  pointer-events:none;
+}
+
+/* hover */
+.btn-ghost:hover{
+  background:
+    linear-gradient(
+      135deg,
+      rgba(200,155,60,.18),
+      rgba(255,255,255,.9)
+    );
+  color:var(--brand1);
+  transform:translateY(-3px);
+  box-shadow:
+    0 16px 36px rgba(200,155,60,.35);
+}
+
+/* =========================
+   SECONDARY / SOFT BUTTON (OPTIONAL)
+========================= */
+
+.btn-soft{
+  background:rgba(122,31,43,.08);
+  color:var(--brand1);
+  box-shadow:none;
+}
+
+.btn-soft:hover{
+  background:rgba(122,31,43,.15);
+}
+
+/* =========================
+   LARGE CTA
+========================= */
+
+.btn.big{
+  padding:18px 40px;
+  font-size:1.15rem;
+}
+
+/* =========================
+   ALIGNMENT HELPERS
+========================= */
+
+.btn-group{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  flex-wrap:wrap;
+}
+
+.btn-center{
+  display:flex;
+  justify-content:center;
+}
+
+/* =========================
+   ACCESSIBILITY
+========================= */
+
+.btn:focus-visible{
+  outline:3px solid rgba(200,155,60,.6);
+  outline-offset:4px;
+}
+
+
+/* ==================================================
+   HEADER
+================================================== */
+
+.header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:#fff;
+  box-shadow:var(--shadow-sm);
+}
+
+.header-bar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:14px 16px;
+}
+
+.logo{
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  border:2px solid var(--brand2);
+}
+
+.menu-btn{
+  width:46px;
+  height:46px;
+  border-radius:14px;
+  border:none;
+  background:var(--brand1);
+  color:#fff;
+  font-size:22px;
+  cursor:pointer;
+}
+
+/* ==================================================
+   OVERLAY
+================================================== */
+
+#overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.55);
+  backdrop-filter:blur(2px);
+  opacity:0;
+  pointer-events:none;
+  transition:.3s;
+  z-index:998;
+}
+
+#overlay.show{
+  opacity:1;
+  pointer-events:auto;
+}
+
+/* ==================================================
+   SIDEBAR MENU
+================================================== */
+
+.sidebar{
+  position:fixed;
+  top:0;
+  left:-300px;
+  width:270px;
+  height:100%;
+  background:#fff;
+  z-index:999;
+  padding:20px;
+  transition:.35s ease;
+  box-shadow:var(--shadow-lg);
+}
+
+.sidebar.open{
+  left:0;
+}
+
+/* Close button */
+.close-btn{
+  background:none;
+  border:none;
+  font-size:22px;
+  cursor:pointer;
+  float:right;
+  color:var(--brand1);
+}
+
+/* Menu */
+.menu{
+  list-style:none;
+  padding:50px 0 0;
+  margin:0;
+}
+
+.menu li{
+  margin-bottom:18px;
+}
+
+.menu a,
+.menu span{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size:1.05rem;
+  color:var(--text);
+  text-decoration:none;
+  cursor:pointer;
+}
+
+.menu a.active{
+  color:var(--brand1);
+  font-weight:600;
+}
+
+/* Submenu */
+.has-sub ul{
+  list-style:none;
+  display:none;
+  padding-left:14px;
+  margin-top:10px;
+}
+
+.has-sub.open ul{
+  display:block;
+}
+
+.has-sub ul li{
+  margin:10px 0;
+}
+
+.has-sub ul a{
+  font-size:.95rem;
+  color:var(--muted);
+}
+
+.has-sub span::after{
+  content:"⌄";
+  font-size:.9rem;
+  color:var(--muted);
+}
+
+/* ==================================================
+   HERO
+================================================== */
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:60px;
+  align-items:center;
+}
+
+.hero-card{
+  background:#fff;
+  padding:28px;
+  border-radius:var(--radius-lg);
+  box-shadow:var(--shadow-lg);
+}
+
+.hero-card img,
+.hero-card video{
+  width:100%;
+  border-radius:18px;
+  box-shadow:var(--shadow-md);
+}
+/* ==================================================
+   ABOUT SECTION – BALANCED MEDIA + TEXT
+================================================== */
+
+#about{
+  background:
+    radial-gradient(900px 450px at 10% 10%, rgba(200,155,60,.10), transparent),
+    linear-gradient(180deg, rgba(122,31,43,.04), transparent);
+}
+
+/* Two-column layout */
+.container.two-col{
+  display:grid;
+  grid-template-columns:1fr 1.2fr; /* MEDIA + TEXT BALANCE */
+  gap:5rem;
+  align-items:center; /* ALIGN VIDEO WITH TEXT */
+}
+
+/* =========================
+   LEFT – VIDEO AREA
+========================= */
+
+.about-media{
+  max-width:520px; /* BIGGER VIDEO */
+}
+
+/* Video card */
+.about-media .hero-card{
+  background:#fff;
+  padding:20px;
+  border-radius:28px;
+  box-shadow:0 30px 70px rgba(0,0,0,.22);
+}
+
+/* Video */
+.about-media video{
+  width:100%;
+  height:320px;           /* KEY FIX */
+  object-fit:cover;
+  border-radius:20px;
+  background:#000;
+}
+
+/* Caption */
+.about-highlight{
+  margin-top:16px;
+  text-align:center;
+  font-size:1.1rem;
+  font-weight:600;
+  color:var(--brand1);
+}
+
+/* =========================
+   RIGHT – CONTENT
+========================= */
+
+.about-content{
+  max-width:620px;  /* LIMIT TEXT WIDTH */
+}
+
+/* Title */
+.about-content .section-title{
+  margin-bottom:18px;
+}
+
+/* Paragraphs */
+.about-content p{
+  font-size:1.12rem;
+  line-height:1.85;
+  color:#3b2a2a;
+  margin-bottom:16px;
+}
+
+/* Sub-headings */
+.section-subtitle{
+  font-size:1.3rem;
+  font-weight:700;
+  color:var(--brand1);
+  margin-top:26px;
+  margin-bottom:8px;
+}
+
+/* Underline */
+.section-subtitle::after{
+  content:"";
+  display:block;
+  width:42px;
+  height:3px;
+  margin-top:6px;
+  background:linear-gradient(90deg,var(--brand2),transparent);
+  border-radius:3px;
+}
+
+/* =========================
+   TICKS
+========================= */
+
+.ticks{
+  list-style:none;
+  padding:0;
+  margin:18px 0 10px;
+}
+
+.ticks li{
+  position:relative;
+  padding-left:30px;
+  margin-bottom:12px;
+  font-size:1rem;
+  color:#4a3a3a;
+}
+
+.ticks li::before{
+  content:"✔";
+  position:absolute;
+  left:0;
+  top:3px;
+  color:var(--brand2);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px){
+  .container.two-col{
+    grid-template-columns:1fr;
+    gap:3rem;
+    align-items:start;
+  }
+
+  .about-media{
+    max-width:100%;
+  }
+
+  .about-media video{
+    height:240px;
+  }
+
+  .about-content{
+    max-width:100%;
+  }
+}
+
+/* ==================================================
+   FRANCHISE – STYLISH & PREMIUM
+================================================== */
+
+.franchise{
+  background:
+    radial-gradient(800px 400px at 10% 10%, rgba(200,155,60,.12), transparent),
+    linear-gradient(180deg, rgba(122,31,43,.04), transparent);
+}
+
+.franchise-hero-grid{
+  display:grid;
+  grid-template-columns:1.3fr .7fr;
+  gap:4rem;
+  margin-top:50px;
+}
+
+.franchise-info h3{
+  font-size:1.7rem;
+  color:var(--brand1);
+  margin-bottom:14px;
+}
+
+.franchise-highlight{
+  background:#fff;
+  padding:36px;
+  border-radius:26px;
+  box-shadow:var(--shadow-lg);
+  text-align:center;
+}
+
+.franchise-highlight h4{
+  font-size:1.4rem;
+  margin-bottom:10px;
+  color:var(--brand1);
+}
+
+/* =========================
+   BENEFITS TABLE
+========================= */
+
+.franchise-benefits{
+  background:#fff;
+}
+
+.benefits-table{
+  display:grid;
+  grid-template-columns:1.2fr 1fr 1fr;
+  margin-top:40px;
+  border-radius:22px;
+  overflow:hidden;
+  box-shadow:var(--shadow-lg);
+}
+
+.benefits-table > div{
+  padding:18px;
+  border-bottom:1px solid rgba(0,0,0,.08);
+}
+
+.benefit-header{
+  font-weight:700;
+  background:#f7f2ea;
+}
+
+.benefit-header.highlight{
+  background:linear-gradient(135deg,var(--brand1),var(--brand2));
+  color:#fff;
+}
+
+.yes{color:#1f7a4d;font-weight:600}
+.no{color:#9b2c2c;font-weight:600}
+
+/* =========================
+   STEPS
+========================= */
+
+.steps-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:26px;
+  margin-top:50px;
+}
+
+.step-card{
+  background:#fff;
+  padding:28px;
+  border-radius:24px;
+  box-shadow:var(--shadow-md);
+  transition:.35s;
+}
+
+.step-card:hover{
+  transform:translateY(-8px);
+  box-shadow:var(--shadow-lg);
+}
+
+.step-card span{
+  display:inline-block;
+  font-size:1.8rem;
+  font-weight:700;
+  color:var(--brand2);
+  margin-bottom:8px;
+}
+
+.step-card h4{
+  font-size:1.2rem;
+  color:var(--brand1);
+}
+
+/* CTA */
+.franchise-cta{
+  margin-top:60px;
+  display:flex;
+  justify-content:center;
+  gap:24px;
+  flex-wrap:wrap;
+}
+
+/* Responsive */
+@media(max-width:900px){
+  .franchise-hero-grid,
+  .steps-grid{
+    grid-template-columns:1fr;
+  }
+
+  .benefits-table{
+    grid-template-columns:1fr;
+  }
+}
+
+
+/* ==================================================
+   PROGRAMS / COURSES SLIDER
+================================================== */
+
+#classes{
+  background:
+    linear-gradient(180deg, rgba(200,155,60,.08), transparent);
+}
+
+/* Slider wrapper */
+.slider-wrap{
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  gap:18px;
+  align-items:center;
+  margin-top:40px;
+}
+
+/* Slider container */
+.slider{
+  display:grid;
+  grid-auto-flow:column;
+  gap:26px;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  padding-bottom:10px;
+}
+
+.slider::-webkit-scrollbar{
+  display:none;
+}
+
+/* Program card */
+.program-card{
+  min-width:320px;
+  max-width:360px;
+  background:#fff;
+  border-radius:26px;
+  overflow:hidden;
+  scroll-snap-align:start;
+  box-shadow:0 20px 45px rgba(0,0,0,.18);
+  transition:.35s ease;
+}
+
+/* Hover lift */
+.program-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 30px 70px rgba(0,0,0,.22);
+}
+
+/* Card image */
+.program-card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+}
+
+/* Card body */
+.program-card .card-body{
+  padding:22px;
+}
+
+/* Card title */
+.program-card h3{
+  font-size:1.3rem;
+  color:var(--brand1);
+  margin-bottom:10px;
+}
+
+/* Card text */
+.program-card p{
+  font-size:1.05rem;
+  line-height:1.6;
+  color:#4a3a3a;
+  margin-bottom:14px;
+}
+
+/* Card link */
+.program-card .link{
+  font-weight:600;
+  color:var(--brand1);
+  text-decoration:none;
+  position:relative;
+}
+
+/* Link underline animation */
+.program-card .link::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-4px;
+  width:0;
+  height:2px;
+  background:linear-gradient(90deg,var(--brand2),transparent);
+  transition:.3s;
+}
+
+.program-card .link:hover::after{
+  width:100%;
+}
+
+/* Slider buttons */
+.slider-btn{
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  border:none;
+  background:var(--brand1);
+  color:#fff;
+  font-size:20px;
+  cursor:pointer;
+  box-shadow:0 10px 24px rgba(0,0,0,.25);
+  transition:.25s;
+}
+
+.slider-btn:hover{
+  transform:translateY(-3px);
+  background:var(--brand2);
+  color:#3a2500;
+}
+
+/* Hint */
+.hint{
+  margin-top:14px;
+  color:var(--muted);
+  font-size:.95rem;
+}
+
+/* Responsive */
+@media (max-width:900px){
+  .slider-wrap{
+    grid-template-columns:1fr;
+  }
+
+  .slider-btn{
+    display:none;
+  }
+
+  .program-card{
+    min-width:280px;
+  }
+}
+
+/* ==================================================
+   EVENTS & ACADEMIC ACTIVITIES
+================================================== */
+
+.events{
+  background:
+    linear-gradient(180deg, rgba(122,31,43,.06), transparent);
+}
+
+/* Slider wrap */
+.events-slider-wrap{
+  margin-top:50px;
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  gap:20px;
+  align-items:center;
+}
+
+/* Slider */
+.events-slider{
+  display:grid;
+  grid-auto-flow:column;
+  gap:30px;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  padding-bottom:12px;
+}
+
+.events-slider::-webkit-scrollbar{
+  display:none;
+}
+
+/* Event card */
+.event-card{
+  min-width:360px;
+  background:#fff;
+  border-radius:28px;
+  overflow:hidden;
+  scroll-snap-align:start;
+  box-shadow:0 22px 50px rgba(0,0,0,.18);
+  transition:.4s ease;
+}
+
+/* Hover effect */
+.event-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 35px 80px rgba(0,0,0,.22);
+}
+
+/* Image */
+.event-card img{
+  width:100%;
+  height:240px;
+  object-fit:cover;
+}
+
+/* Content */
+.event-content{
+  padding:26px;
+}
+
+/* Title */
+.event-content h3{
+  font-size:1.35rem;
+  color:var(--brand1);
+  margin-bottom:12px;
+}
+
+/* Text */
+.event-content p{
+  font-size:1.05rem;
+  line-height:1.65;
+  color:#4a3a3a;
+}
+
+/* Slider buttons */
+.events .slider-btn{
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  border:none;
+  background:var(--brand1);
+  color:#fff;
+  font-size:20px;
+  cursor:pointer;
+  box-shadow:0 12px 26px rgba(0,0,0,.25);
+  transition:.25s ease;
+}
+
+.events .slider-btn:hover{
+  transform:translateY(-3px);
+  background:var(--brand2);
+  color:#3a2500;
+}
+
+/* Responsive */
+@media (max-width:900px){
+  .events-slider-wrap{
+    grid-template-columns:1fr;
+  }
+
+  .events .slider-btn{
+    display:none;
+  }
+
+  .event-card{
+    min-width:300px;
+  }
+}
+
+
+/* =========================
+   GALLERY – ELEGANT
+========================= */
+
+#masonry,
+.masonry{
+  margin-top:40px;
+}
+
+.masonry img{
+  border-radius:18px;
+  margin-bottom:16px;
+  box-shadow:0 14px 30px rgba(0,0,0,.15);
+  transition:.35s ease;
+}
+
+.masonry img:hover{
+  transform:scale(1.03);
+  box-shadow:0 20px 45px rgba(0,0,0,.25);
+}
+
+
+/* ==================================================
+   CONTACT SECTION – PREMIUM & TRUSTED
+================================================== */
+
+.contact-section{
+  background:
+    linear-gradient(180deg, rgba(200,155,60,.08), transparent);
+}
+
+/* Contact details */
+.contact-details{
+  margin:24px 0;
+  display:grid;
+  gap:14px;
+}
+
+.contact-item strong{
+  display:block;
+  font-size:.95rem;
+  color:var(--brand1);
+}
+
+.contact-item a,
+.contact-item span{
+  font-size:1.05rem;
+  color:#3b2a2a;
+  text-decoration:none;
+}
+
+/* Action buttons */
+.contact-actions{
+  display:flex;
+  gap:14px;
+  margin:26px 0;
+  flex-wrap:wrap;
+}
+
+/* Form */
+.contact-form{
+  background:#fff;
+  padding:32px;
+  border-radius:26px;
+  box-shadow:0 30px 70px rgba(0,0,0,.18);
+}
+
+/* Inputs */
+.contact-form input,
+.contact-form select,
+.contact-form textarea{
+  width:100%;
+  padding:14px 16px;
+  border-radius:14px;
+  border:1px solid rgba(0,0,0,.15);
+  font-size:1rem;
+  margin-bottom:16px;
+}
+
+/* Mini cards */
+.contact-cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+  margin-top:26px;
+}
+
+.mini-card{
+  background:#fff;
+  padding:18px;
+  border-radius:18px;
+  box-shadow:0 16px 36px rgba(0,0,0,.15);
+}
+
+.mini-card h4{
+  color:var(--brand1);
+  margin-bottom:6px;
+}
+
+/* Responsive */
+@media (max-width:900px){
+  .contact-cards{
+    grid-template-columns:1fr;
+  }
+
+  .contact-actions{
+    flex-direction:column;
+  }
+
+  .contact-form{
+    padding:24px;
+  }
+}
+
+
+/* ==================================================
+   📱 EXTRA MOBILE OPTIMIZATION (<480px)
+================================================== */
+
+@media (max-width: 480px){
+
+  /* Typography adjustments */
+  .title{
+    font-size:clamp(2rem, 8vw, 2.6rem);
+  }
+  p{
+    font-size:1rem;
+    line-height:1.7;
+  }
+
+  /* Spacing fixes */
+  .section{
+    padding:60px 0;
+  }
+
+  /* Franchise benefits table scroll */
+  .benefits-table{
+    display:block;
+    overflow-x:auto;
+    white-space:nowrap;
+  }
+
+  /* Video height adjusts */
+  .about-media video{
+    height:200px !important;
+  }
+
+  /* Contact form */
+  .contact-form{
+    padding:18px !important;
+  }
+
+  /* Force single-column grids */
+  .steps-grid,
+  .contact-cards,
+  .franchise-hero-grid{
+    grid-template-columns:1fr !important;
+  }
+
+  /* Buttons full-width */
+  .btn{
+    width:100%;
+    max-width:320px;
+    margin:auto;
+  }
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+h1, h2, h3, h4 {
+  word-break: break-word;
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
